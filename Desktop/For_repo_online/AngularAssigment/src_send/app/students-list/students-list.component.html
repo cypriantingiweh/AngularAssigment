@@ -1,0 +1,27 @@
+
+<div class='card'>
+    <div class='card-header'>
+          {{pageTitle}}
+    </div>
+<table class="table">
+    <thead>
+        <th>Student Names</th>
+        <th>Student Matricule</th>
+        <th>Details links</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor = "let student of students">
+            <td> {{ student.studentName }} </td>
+            <td> {{ student.studentMatricule}} </td>
+            <td>  <a class="btn btn-outline-info" [routerLink]="['/student', student.studentId]">
+                view student details
+              </a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>

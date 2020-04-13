@@ -1,0 +1,42 @@
+﻿<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="container-fluid">
+      <div class="text-center table-responsive">
+
+        <table class="table">
+          <thead>
+            <th>SN</th>
+            <th>StudentNames</th>
+            <th>Details-Links</th>
+           
+          </thead>
+
+          <tbody>
+              <tr  *ngFor = "let student of students">
+                <td>  {{student.studentId}} </td>
+                <td>   {{student.studentName}} </td>
+                <td>  <a class="btn btn-info" [routerLink]="['/student', student.studentId]">
+                  view student details
+                </a> </td>
+              </tr>
+            </tbody>
+        </table>
+      
+      </div>
+
+      <div class="text-center">Developed by:</div>
+      <div class="text-center">
+        <h4>Cyprian Tingiweh Sintenyui</h4>
+        <h4>Matricule: SC17A317</h4>
+      </div>
+
+      <div class="text-center">@cypriantingiweh</div>
+      <div class="text-center">
+        <a href="https://github.com/cypriantingiweh">github-account</a>
+      </div>
+    </div>
+  </div>
+</div>
